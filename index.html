@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ReadyPaste — Snippet Keyboard</title>
+  <meta name="description" content="Save canned replies, email, address, and templates — paste them in any app with one tap." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0c0f0e;
+      --bg-2: #121816;
+      --surface: #1a211e;
+      --text: #f2f7f5;
+      --muted: rgba(242, 247, 245, 0.62);
+      --brand: #2ec89e;
+      --brand-dim: #1a8f72;
+      --border: rgba(255, 255, 255, 0.08);
+      --radius: 16px;
+      --font: "DM Sans", system-ui, sans-serif;
+      --display: "Fraunces", Georgia, serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font);
+      color: var(--text);
+      background:
+        radial-gradient(ellipse 80% 50% at 50% -10%, rgba(46, 200, 158, 0.22), transparent 55%),
+        radial-gradient(ellipse 60% 40% at 100% 60%, rgba(26, 143, 114, 0.12), transparent 50%),
+        var(--bg);
+      line-height: 1.55;
+      min-height: 100vh;
+    }
+    a { color: var(--brand); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { width: min(920px, 92vw); margin: 0 auto; }
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.25rem 0; border-bottom: 1px solid var(--border);
+    }
+    .logo { font-weight: 700; font-size: 1.15rem; color: var(--text); letter-spacing: -0.02em; }
+    .logo span { color: var(--brand); }
+    .nav-links { display: flex; gap: 1.25rem; font-size: 0.92rem; }
+    .nav-links a { color: var(--muted); text-decoration: none; }
+    .nav-links a:hover { color: var(--text); }
+    .hero {
+      padding: 4.5rem 0 3.5rem;
+      text-align: center;
+    }
+    .hero h1 {
+      font-family: var(--display);
+      font-size: clamp(2.4rem, 6vw, 3.6rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 0.35rem;
+    }
+    .hero h1 em { font-style: normal; color: var(--brand); }
+    .hero .tag {
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 34rem;
+      margin: 1rem auto 1.75rem;
+    }
+    .cta {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: var(--brand); color: #06241c;
+      font-weight: 700; padding: 0.85rem 1.4rem;
+      border-radius: 999px; text-decoration: none;
+    }
+    .cta:hover { filter: brightness(1.05); text-decoration: none; }
+    .cta.secondary {
+      background: transparent; color: var(--text);
+      border: 1px solid var(--border); margin-left: 0.6rem;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      padding: 1rem 0 3.5rem;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.35rem 1.25rem;
+    }
+    .card h3 { font-size: 1.05rem; margin-bottom: 0.4rem; }
+    .card p { color: var(--muted); font-size: 0.95rem; }
+    .section { padding: 0 0 3.5rem; }
+    .section h2 {
+      font-family: var(--display);
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+    .section ul { padding-left: 1.2rem; color: var(--muted); }
+    .section li { margin: 0.4rem 0; }
+    .pro {
+      background: linear-gradient(145deg, rgba(46, 200, 158, 0.12), transparent 60%), var(--surface);
+      border: 1px solid rgba(46, 200, 158, 0.28);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+    }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1.75rem 0 2.5rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+      display: flex; flex-wrap: wrap; gap: 0.75rem 1.5rem;
+      justify-content: space-between;
+    }
+    footer .links { display: flex; gap: 1rem; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a class="logo" href="index.html">Ready<span>Paste</span></a>
+      <div class="nav-links">
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <h1>Ready<em>Paste</em></h1>
+      <p class="tag">Snippet keyboard for iPhone. Save canned replies, email, address, and templates — paste them in any app with one tap.</p>
+      <div>
+        <a class="cta" href="https://apps.apple.com" rel="noopener">Download on the App Store</a>
+        <a class="cta secondary" href="support.html">Get support</a>
+      </div>
+    </header>
+
+    <section class="features">
+      <div class="card">
+        <h3>Save once</h3>
+        <p>Store replies, signatures, addresses, and links in one library.</p>
+      </div>
+      <div class="card">
+        <h3>Paste anywhere</h3>
+        <p>Use the ReadyPaste keyboard in Messages, Mail, Notes, and more.</p>
+      </div>
+      <div class="card">
+        <h3>Stay organized</h3>
+        <p>Folders and pins keep your most-used snippets one tap away.</p>
+      </div>
+      <div class="card">
+        <h3>Pro sync</h3>
+        <p>Unlimited snippets plus private iCloud sync across your devices.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>How to enable the keyboard</h2>
+      <ul>
+        <li>Open <strong>Settings → General → Keyboard → Keyboards</strong></li>
+        <li>Tap <strong>Add New Keyboard → ReadyPaste</strong></li>
+        <li>Tap ReadyPaste → turn on <strong>Allow Full Access</strong></li>
+        <li>In any app, tap the globe key and choose ReadyPaste</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <div class="pro">
+        <h2>Free &amp; Pro</h2>
+        <ul>
+          <li><strong>Free:</strong> up to 10 snippets, 1 folder, 3 pins</li>
+          <li><strong>Pro:</strong> unlimited library, smart placeholders (name, date, time, clipboard), private iCloud sync</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 Sulieman Vidal. ReadyPaste — Snippet Keyboard.</p>
+      <div class="links">
+        <a href="support.html">Support</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

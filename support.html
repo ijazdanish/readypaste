@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Support — ReadyPaste</title>
+  <meta name="description" content="Support and help for ReadyPaste — Snippet Keyboard." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0c0f0e;
+      --surface: #1a211e;
+      --text: #f2f7f5;
+      --muted: rgba(242, 247, 245, 0.7);
+      --brand: #2ec89e;
+      --border: rgba(255, 255, 255, 0.08);
+      --radius: 16px;
+      --font: "DM Sans", system-ui, sans-serif;
+      --display: "Fraunces", Georgia, serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font);
+      color: var(--text);
+      background:
+        radial-gradient(ellipse 70% 40% at 50% -5%, rgba(46, 200, 158, 0.18), transparent 50%),
+        var(--bg);
+      line-height: 1.65;
+    }
+    a { color: var(--brand); }
+    .wrap { width: min(760px, 92vw); margin: 0 auto; padding-bottom: 3rem; }
+    nav {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 1.25rem 0; border-bottom: 1px solid var(--border); margin-bottom: 2rem;
+    }
+    .logo { font-weight: 700; color: var(--text); text-decoration: none; }
+    .logo span { color: var(--brand); }
+    .nav-links { display: flex; gap: 1rem; font-size: 0.9rem; }
+    .nav-links a { color: var(--muted); text-decoration: none; }
+    h1 {
+      font-family: var(--display);
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+    .lead { color: var(--muted); margin-bottom: 2rem; font-size: 1.05rem; }
+    h2 { font-size: 1.2rem; margin: 1.75rem 0 0.65rem; }
+    p, li { color: var(--muted); margin-bottom: 0.65rem; }
+    ol, ul { padding-left: 1.25rem; margin-bottom: 0.75rem; }
+    .box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.35rem;
+      margin: 1rem 0 1.5rem;
+    }
+    .box strong { color: var(--text); }
+    footer {
+      margin-top: 2.5rem; padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.9rem; color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a class="logo" href="index.html">Ready<span>Paste</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+      </div>
+    </nav>
+
+    <h1>Support</h1>
+    <p class="lead">Help for ReadyPaste — Snippet Keyboard on iPhone.</p>
+
+    <div class="box">
+      <p><strong>Contact</strong></p>
+      <p>Email: <a href="mailto:support@example.com">support@example.com</a></p>
+      <p style="font-size:0.9rem;opacity:0.85;">Replace <code>support@example.com</code> with your real inbox before you publish this site.</p>
+    </div>
+
+    <h2>Enable the ReadyPaste keyboard</h2>
+    <ol>
+      <li>Open the iPhone <strong>Settings</strong> app</li>
+      <li>Go to <strong>General → Keyboard → Keyboards</strong></li>
+      <li>Tap <strong>Add New Keyboard…</strong> → choose <strong>ReadyPaste</strong></li>
+      <li>Tap <strong>ReadyPaste</strong> → turn on <strong>Allow Full Access</strong></li>
+      <li>Open Messages, Notes, or Mail → tap the globe key → select ReadyPaste</li>
+    </ol>
+
+    <h2>Snippets not inserting?</h2>
+    <ul>
+      <li>Confirm ReadyPaste is added as a keyboard and Full Access is on</li>
+      <li>Force-quit the host app (Messages/Notes) and try again</li>
+      <li>Open the ReadyPaste app once so your library can load</li>
+      <li>Restart your iPhone if the keyboard still does not appear</li>
+    </ul>
+
+    <h2>iCloud sync (Pro)</h2>
+    <ul>
+      <li>Sign in to iCloud on the device (Settings → [Your Name])</li>
+      <li>Unlock ReadyPaste Pro</li>
+      <li>In ReadyPaste → Settings → tap <strong>Sync Now</strong></li>
+      <li>Use the same Apple ID on your other devices</li>
+    </ul>
+
+    <h2>Subscriptions &amp; restore</h2>
+    <ul>
+      <li>Manage or cancel: iOS Settings → Apple ID → Subscriptions</li>
+      <li>In ReadyPaste → Settings → <strong>Restore Purchases</strong> if Pro does not unlock after reinstall</li>
+      <li>Refunds are handled by Apple</li>
+    </ul>
+
+    <h2>Privacy &amp; terms</h2>
+    <p>
+      <a href="privacy.html">Privacy Policy</a><br />
+      <a href="terms.html">Terms of Use</a>
+    </p>
+
+    <footer>
+      <p><a href="index.html">Home</a> · ReadyPaste — Snippet Keyboard</p>
+      <p>© 2026 Sulieman Vidal</p>
+    </footer>
+  </div>
+</body>
+</html>
